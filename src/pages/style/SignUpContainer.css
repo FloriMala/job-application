@@ -1,0 +1,103 @@
+body {
+    background-color: #eeeeee;
+}
+.signUp {
+  display: flex;
+  height: 100vh;
+}
+
+.signUp_image {
+  background-color: #1c2e4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signUp_image_job {
+  width: 150%;
+  margin-top: 60px;
+}
+
+.signUp_form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.signUp_head {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+
+.signUp_para {
+
+  gap: 5px;
+  font-size: 12px;
+  color: grey;
+  margin-left: 70px;
+  margin-top: 4px;
+}
+
+.createAccount {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.signUp_form_input {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.form_input_user > *:not(:last-child) {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form_input_account > *:not(:last-child) {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form_input_preferences > *:not(:last-child) {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form_input_PI > *:not(:last-child) {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sign_up_button {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 950px) {
+  .signUp_form {
+    width: 100%;
+  }
+
+  .signUp_image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .signUp_form {
+    width: 70%;
+  }
+
+  .signUp_image {
+    width: 30%;
+  }
+}

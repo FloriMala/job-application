@@ -1,24 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
+import { createBrowserHistory as history } from "history";
+import SignInContainer from "./pages/SignInContainer";
+import SignUpContainer from "./pages/SignUpContainer";
+import ProfileContainer from "./pages/ProfileContainer";
+import AddJobContainer from "./pages/AddJobContainer";
+import ProtectiveRoute from "./pages/ProtectiveRoute";
+import Navbar from "./layout/navbar/Navbar";
+import SearchContainer from "./pages/SearchContainer";
 
 function App() {
+  localStorage.setItem("showNavbar", true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router history={history}>
+      <Routes>
+        <Route
+          element={
+            <>
+              <ProtectiveRoute>
+                <Navbar />
+                <Outlet />
+              </ProtectiveRoute>
+            </>
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route
+            path="/jobs"
+            element={
+              <ProtectiveRoute>
+                <SearchContainer />
+              </ProtectiveRoute>
+            }
+          />
+          <Route
+            path="/addjob"
+            element={
+              <ProtectiveRoute employee={true}>
+                <AddJobContainer />
+              </ProtectiveRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectiveRoute>
+                <ProfileContainer />
+              </ProtectiveRoute>
+            }
+          />
+        </Route>
+        <Route exact path="/" element={<SignInContainer />} />
+        <Route exact path="/signup" element={<SignUpContainer />} />
+      </Routes>
+    </Router>
   );
 }
 
