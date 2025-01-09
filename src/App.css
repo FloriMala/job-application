@@ -24,6 +24,35 @@
   color: white;
 }
 
+.jobContainer::-webkit-scrollbar {
+  display: none;
+}
+
+input::file-selector-button {
+  color: white;
+  padding: 8px;
+  border: thin solid grey;
+  border-radius: 10px;
+  background-color: #1c2e4a;
+}
+
+.card {
+  background-color: #ffffff;
+  height: 155px;
+  width: 200px;
+
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #e5e5f9;
+}
+
 .App-link {
   color: #61dafb;
 }

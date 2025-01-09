@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import db from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import Modal from "./Modal";
-import Calendar from "./shared/Calendar";
+import Calendar from "./Calendar";
 
 const Applicant = ({ user }) => {
   const [applicant, setApplicant] = useState({});

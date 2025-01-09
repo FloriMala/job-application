@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Form from "../components/shared/Form";
+import Form from "../components/Form";
 import {
   collection,
   query,
@@ -12,13 +12,13 @@ import {
   arrayUnion,
 } from "firebase/firestore";
 import db from "../firebase";
-import JobCard from "../components/shared/JobCard";
-import Modal from "../components/shared/Modal";
+import JobCard from "../components/JobCard";
+import Modal from "../components/Modal";
 import { useSnackbar } from "notistack";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-import "./../components/shared/style/Modal.css";
-import Applicants from "../components/shared/Applicants";
+import "./../components/style/Modal.css";
+import Applicants from "../components/Applicants";
 
 const SearchContainer = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -31,6 +31,8 @@ const SearchContainer = () => {
   });
   const [searchResult, setSearchResult] = useState([]);
 
+  console.log(userType);
+  
   const [editJobForm, setEditJobForm] = useState({
     position: "",
     company: "",

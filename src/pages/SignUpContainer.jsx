@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import db from "../firebase";
+import db from "../firebase.js";
 import "./style/SignUpContainer.css";
 import JobSearchImage from "../assets/images/job_search.png";
-import Button from "../components/shared/Button";
+import Button from "../components/Button";
 import { useSnackbar } from "notistack";
 import User from "./SignUp/User";
 import PersonalInformation from "./SignUp/PersonalInformation.jsx";
 import Account from "./SignUp/Account";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import Modal from "../components/shared/Modal";
+import Modal from "../components/Modal";
 import CVSend from "./CVSend";
 
 const style = {
@@ -53,7 +53,8 @@ const SignUpContainer = () => {
   };
 
   const postData = async () => {
-    console.log("1");
+    console.log("TEST");
+    
     const collectionRef = collection(db, "users");
     const payload = formData;
     await addDoc(collectionRef, payload);
@@ -66,6 +67,7 @@ const SignUpContainer = () => {
   const handleSubmit = (e) => {
     setIsLoading(true);
 
+    
     switch (true) {
       case !formData.email || !formData.username:
         enqueueSnackbar("Please fill Email and Username!", {

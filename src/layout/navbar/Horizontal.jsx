@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import JobSearch from "../../assets/images/job_search.png";
-import NavbarLogo from "../../assets/images/list.svg";
 
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";

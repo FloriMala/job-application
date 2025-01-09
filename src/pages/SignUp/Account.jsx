@@ -1,4 +1,4 @@
-import TextInput from "../../components/shared/TextInput";
+import TextInput from "../../components/TextInput";
 import "../style/SignUpContainer.css";
 
 const Account = ({ style, handleChange }) => {

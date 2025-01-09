@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Form from "../components/shared/Form";
+import Form from "../components/Form";
 import { getDoc, doc, updateDoc } from "firebase/firestore";
 import db from "../firebase";
 import { useSnackbar } from "notistack";

@@ -1,5 +1,5 @@
 import React from "react";
-import TextInput from "./shared/TextInput";
+import TextInput from "./TextInput";
 import Button from "./Button";
 import CloseIcon from "@mui/icons-material/Close";
 import CVSend from "../pages/CVSend";

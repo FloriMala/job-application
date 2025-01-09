@@ -1,5 +1,5 @@
 import React from "react";
-import Spinner from "./../../assets/gif/Spinner-2.gif";
+import Spinner from "../assets/gif/Spinner-2.gif";
 const Button = ({
   name = "Name",
   isLoading = false,
